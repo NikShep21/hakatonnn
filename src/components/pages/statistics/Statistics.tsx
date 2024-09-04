@@ -8,7 +8,7 @@ const Statistics: React.FC = () => {
       <h2 className={styles.header}>Достопримечательности</h2>
       <div className={styles.columns}>
         {
-          dataOne.map((elem:unknown) => (
+          dataOne.map((elem:any) => (
             <div key={elem.id}>{elem.name}</div> // Предполагается, что у элемента есть id и name
           ))
         }
@@ -17,7 +17,7 @@ const Statistics: React.FC = () => {
       <h2 className={styles.header}>Места развлечений</h2>
       <div className={styles.columns}>
         {
-          dataTwo.map((elem:unknown) => (
+          dataTwo.map((elem:any) => (
             <div key={elem.id}>{elem.name}</div> // Аналогично здесь
           ))
         }
