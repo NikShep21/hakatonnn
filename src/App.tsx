@@ -2,7 +2,6 @@ import { Route,Routes } from "react-router-dom"
 import Layout from "./components/layout/Layout"
 import HomePage from "./components/pages/homePage/HomePage"
 import Map from "./components/pages/map/Map"
-import Files from "./components/pages/files/Files"
 import NeuroNet from "./components/pages/neuronet/NeuroNet"
 import Statistics from "./components/pages/statistics/Statistics"
 function App() {
