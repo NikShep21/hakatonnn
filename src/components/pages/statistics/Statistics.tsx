@@ -1,6 +1,6 @@
 
 import styles from './Statistics.module.scss'
-import {dataOne:any,dataTwo:any} from './data/data.js'
+import {dataOne:any[],dataTwo:any[]} from './data/data.js'
 const Statistics = () => {
   return (
     <div>
