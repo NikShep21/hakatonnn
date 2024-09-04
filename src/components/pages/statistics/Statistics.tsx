@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from './Statistics.module.scss'
 import {dataOne,dataTwo} from './data/data.js'
 const Statistics = () => {
