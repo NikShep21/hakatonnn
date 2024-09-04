@@ -50,18 +50,18 @@ const MapViewer: React.FC<MapViewerProps> = ({ mapSrc }) => {
         };
     }, [isDragging, startX, startY, initialLeft, initialTop]);
 
-    const handleMouseDown = (e: MouseEvent) => {
-        if (e.button === 0) { 
-            setIsDragging(true);
-            setStartX(e.clientX);
-            setStartY(e.clientY);
-            if (mapWrapperRef.current) {
-                setInitialLeft(parseInt(getComputedStyle(mapWrapperRef.current).left, 10));
-                setInitialTop(parseInt(getComputedStyle(mapWrapperRef.current).top, 10));
-                mapWrapperRef.current.style.cursor = 'grabbing';
-            }
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.button === 0) { 
+        setIsDragging(true);
+        setStartX(e.clientX);
+        setStartY(e.clientY);
+        if (mapWrapperRef.current) {
+            setInitialLeft(parseInt(getComputedStyle(mapWrapperRef.current).left, 10));
+            setInitialTop(parseInt(getComputedStyle(mapWrapperRef.current).top, 10));
+            mapWrapperRef.current.style.cursor = 'grabbing';
         }
-    };
+    }
+};
 
     const handleDragStart = (e: React.DragEvent<HTMLImageElement>) => {
         e.preventDefault(); 
