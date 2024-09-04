@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Statistics.module.css'; // Проверьте путь к стилям
-import { dataOne, dataTwo } from './data'; // Проверьте путь к данным
+import { dataOne, dataTwo } from './data/data.ts'; // Проверьте путь к данным
 
 const Statistics: React.FC = () => {
   return (
