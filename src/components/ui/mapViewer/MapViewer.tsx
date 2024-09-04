@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, MouseEvent } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './MapViewer.module.scss';
 
 interface MapViewerProps {
