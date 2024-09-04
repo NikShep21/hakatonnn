@@ -20,16 +20,15 @@ const MapViewer: React.FC<MapViewerProps> = ({ mapSrc }) => {
             if (isDragging && mapWrapperRef.current) {
                 const dx = e.clientX - startX;
                 const dy = e.clientY - startY;
-                if (mapWrapperRef.current) {
-                    mapWrapperRef.current.style.left = `${Math.min(
-                        Math.max(initialLeft + dx, -mapWrapperRef.current.offsetWidth + containerRef.current!.offsetWidth),
-                        0
-                    )}px`;
-                    mapWrapperRef.current.style.top = `${Math.min(
-                        Math.max(initialTop + dy, -mapWrapperRef.current.offsetHeight + containerRef.current!.offsetHeight),
-                        0
-                    )}px`;
-                }
+
+                mapWrapperRef.current.style.left = ${Math.min(
+                    Math.max(initialLeft + dx, -mapWrapperRef.current.offsetWidth + (containerRef.current?.offsetWidth || 0)),
+                    0
+                )}px;
+                mapWrapperRef.current.style.top = ${Math.min(
+                    Math.max(initialTop + dy, -mapWrapperRef.current.offsetHeight + (containerRef.current?.offsetHeight || 0)),
+                    0
+                )}px;
             }
         };
 
@@ -42,12 +41,12 @@ const MapViewer: React.FC<MapViewerProps> = ({ mapSrc }) => {
             }
         };
 
-        window.addEventListener('mousemove', handleMouseMove as EventListener);
-        window.addEventListener('mouseup', handleMouseUp as EventListener);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleMouseUp);
 
         return () => {
-            window.removeEventListener('mousemove', handleMouseMove as EventListener);
-            window.removeEventListener('mouseup', handleMouseUp as EventListener);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
         };
     }, [isDragging, startX, startY, initialLeft, initialTop]);
 
@@ -74,6 +73,7 @@ const MapViewer: React.FC<MapViewerProps> = ({ mapSrc }) => {
                 className={styles.mapWrapper}
                 ref={mapWrapperRef}
                 onMouseDown={handleMouseDown}
+                style={{ position: 'absolute', cursor: 'grab' }} // Убедитесь, что у вас есть стиль для позиционирования
             >
                 <img
                     src={mapSrc}
