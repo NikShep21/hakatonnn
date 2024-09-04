@@ -21,14 +21,14 @@ const MapViewer: React.FC<MapViewerProps> = ({ mapSrc }) => {
                 const dx = e.clientX - startX;
                 const dy = e.clientY - startY;
 
-                mapWrapperRef.current.style.left = ${Math.min(
+                mapWrapperRef.current.style.left = `${Math.min(
                     Math.max(initialLeft + dx, -mapWrapperRef.current.offsetWidth + (containerRef.current?.offsetWidth || 0)),
                     0
-                )}px;
-                mapWrapperRef.current.style.top = ${Math.min(
+                )}px`;
+                mapWrapperRef.current.style.top = `${Math.min(
                     Math.max(initialTop + dy, -mapWrapperRef.current.offsetHeight + (containerRef.current?.offsetHeight || 0)),
                     0
-                )}px;
+                )}px`;
             }
         };
 
