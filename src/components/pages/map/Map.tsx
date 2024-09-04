@@ -1,4 +1,4 @@
-import React from 'react'
+
 import map from '../../../assets/map.jpg'
 import MapViewer from '../../ui/mapViewer/mapViewer'
 import styles from './Map.module.scss'
