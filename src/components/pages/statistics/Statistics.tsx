@@ -5,7 +5,7 @@ import { dataOne, dataTwo } from './data/data.ts'; // Проверьте пут�
 const Statistics: React.FC = () => {
   return (
     <div>
-      <h2 className={styles.header}></h2>
+      <h2 className={styles.header}>Достопримечательности</h2>
       <div className={styles.columns}>
         {
           dataOne.map((elem:any,id:number) => (
