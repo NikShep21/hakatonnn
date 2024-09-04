@@ -1,4 +1,4 @@
-export const dataOne = [
+export const dataOne:unknown[] = [
     "Название",
     "Средний рейтинг",
     "Лайки",
