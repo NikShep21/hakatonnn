@@ -1,0 +1,32 @@
+.container {
+    width: 900px; 
+    height: 600px; 
+    overflow: hidden; 
+    position: relative; 
+    border: 2px solid #ccc; 
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.mapWrapper {
+    position: absolute; /* Абсолютное позиционирование карты внутри окна */
+    top: 0;
+    left: 0;
+    cursor: grab; /* Курсор для перемещения карты */
+}
+
+.mapImage {
+    display: block; /* Убираем пробелы вокруг изображения */
+}
+
+.marker {
+    position: absolute; /* Абсолютное позиционирование меток */
+    background: red; /* Цвет фона метки */
+    color: white; /* Цвет текста метки */
+    border-radius: 50%; /* Округлая форма метки */
+    padding: 5px; /* Отступ вокруг текста метки */
+    font-size: 12px; /* Размер шрифта текста метки */
+    transform: translate(-50%, -50%); /* Центрирование метки по координатам */
+    cursor: pointer; /* Курсор для метки */
+}

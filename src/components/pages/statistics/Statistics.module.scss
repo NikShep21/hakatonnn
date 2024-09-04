@@ -1,0 +1,16 @@
+.header{
+    margin-top: 60px;
+    text-align: center;
+    font-size:38px ;
+}
+.columns{
+    margin-top: 80px;
+    gap: 25px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.columns > div {
+    font-size: 30px; 
+}
